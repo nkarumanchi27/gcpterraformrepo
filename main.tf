@@ -12,7 +12,10 @@ resource "google_storage_bucket" "statefile_bucket" {
   }
 }
 
-/*resource "google_service_account" "service_account123" {
-  account_id   = "abcd123456789"
-  display_name = "createdthroughterraform"
-}*/
+resource "google_container_cluster" "primary" {
+  name     = "gke-production-cluster"
+  location = "us-east1"
+  ip_allocation_policy {
+  }
+  enable_autopilot = true
+}
