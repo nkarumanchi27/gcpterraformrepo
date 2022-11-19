@@ -16,7 +16,7 @@ While the state of this terraform project is stored in a GCS bucket backend, the
 
  - Clone this repository to your local environment
  - Copy your GCP service account cridentals keys json file (Ex: keys.json) onto the root folder of this repository
- - Run 'terraform init' to doanload and initialize providers
+ - Run 'terraform init' to initialize backend and provider plugins
  - Add any resources you want to add to the cluster onto the main.tf file. example below adds a gcs bucket.
  ```
  resource google_storage_bucket "cicd-storagebucket" {
